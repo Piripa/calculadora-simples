@@ -5,7 +5,7 @@ class Calculator:
         self.valor2 = valor2
 
     def soma(valor1, valor2):
-        return valor1 + valor2
+        return 0
     def subtracao(valor1, valor2):
         return 0
 

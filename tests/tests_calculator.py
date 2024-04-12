@@ -6,3 +6,5 @@ class Test_Calculator(unittest.TestCase):
         valor1, valor2 = Calculator(1,2)
         self.assertEqual(3,Calculator.soma(valor1,valor2))
    
+if __name__ == "__main__":
+    unittest.main()
