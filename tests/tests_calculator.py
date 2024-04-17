@@ -39,10 +39,10 @@ class Test_Calculator(unittest.TestCase):
         self.assertEqual(1, Calculator.divisao(2.5, 2.5))
 
     def test_divisao_valores_fracionados(self):
-        self.assertEqual(1.25, Calculator.divisao(2.5, 1.5))
+        self.assertEqual(1.25, Calculator.divisao(2.5, 2))
 
     def test_divisao_por_zero(self):
-        self.assertEqual(0, Calculator.divisao(2, 0))
+        self.assertEqual(Exception, Calculator.divisao(2, 0))
 
     def teste_divisao_zero_inteiro(self):
         self.assertEqual(0, Calculator.divisao(0, 2))

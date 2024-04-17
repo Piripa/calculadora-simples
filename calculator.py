@@ -9,7 +9,12 @@ class Calculator:
         return valor1 - valor2
 
     def divisao(valor1, valor2):
-        return valor1 / valor2
+        if(valor1 == 0 ):
+            return 0
+        elif(valor2 == 0):
+            return Exception
+        else:
+            return valor1 / valor2
     
     def multiplicacao(valor1, valor2):
         return valor1 * valor2
