@@ -2,9 +2,10 @@ import unittest
 from calculator import Calculator
 # python -m unittest tests/tests_calculator.py
 
-
 class Test_Calculator(unittest.TestCase):
-    # Testes da soma
+
+    # Testes de Soma
+
     def test_soma_valores_positivos(self):
         self.assertEqual(3, Calculator.soma(1, 2))
 
@@ -22,8 +23,8 @@ class Test_Calculator(unittest.TestCase):
 
     def test_soma_valores_negativo_nulo(self):
         self.assertEqual(-5, Calculator.soma(-5, 0))
-#-------------------------------------
-    #Testes de Subtração
+
+    # Testes de Subtração
     
     def test_subtrai_valores_positivos(self):
         self.assertEqual(-1, Calculator.subtracao(1,2))
@@ -51,8 +52,9 @@ class Test_Calculator(unittest.TestCase):
     
     def test_subtrai_valores_nulo_nulo(self):
         self.assertEqual(0, Calculator.subtracao(0,0))
-    
-#-------------------------------------
+
+    # Testes de Divisão
+
     def test_divisao_valores_inteiros(self):
         self.assertEqual(1, Calculator.divisao(5, 5))
 
@@ -77,6 +79,37 @@ class Test_Calculator(unittest.TestCase):
     def teste_divisao_zero_inteiro(self):
         self.assertEqual(0, Calculator.divisao(0, 2))
 
+    # Testes de Multiplicação
+
+    def test_multiplica_valores_positivos(self):
+        self.assertEqual(6, Calculator.multiplicacao(2, 3))
+
+    def test_multiplica_valores_negativos(self):
+        self.assertEqual(6, Calculator.multiplicacao(-2, -3))
+
+    def test_multiplica_valor_positivo_negativo(self):
+        self.assertEqual(-6, Calculator.multiplicacao(2, -3))
+
+    def test_multiplica_valor_negativo_positivo(self):
+        self.assertEqual(-6, Calculator.multiplicacao(-2, 3))
+
+    def test_multiplica_por_zero(self):
+        self.assertEqual(0, Calculator.multiplicacao(2, 0))
+
+    def test_multiplica_por_zero_negativo(self):
+        self.assertEqual(0, Calculator.multiplicacao(-2, 0))
+
+    def test_multiplica_por_zero_nulo(self):
+        self.assertEqual(0, Calculator.multiplicacao(0, 0))
+
+    def test_multiplica_por_um(self):
+        self.assertEqual(5, Calculator.multiplicacao(5, 1))
+
+    def test_multiplica_por_um_negativo(self):
+        self.assertEqual(-5, Calculator.multiplicacao(-5, 1))
+
+    def test_multiplica_por_um_nulo(self):
+        self.assertEqual(0, Calculator.multiplicacao(0, 1))
 
 if __name__ == "__main__":
     unittest.main()
