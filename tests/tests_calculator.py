@@ -22,7 +22,37 @@ class Test_Calculator(unittest.TestCase):
 
     def test_soma_valores_negativo_nulo(self):
         self.assertEqual(-5, Calculator.soma(-5, 0))
+#-------------------------------------
+    #Testes de Subtração
+    
+    def test_subtrai_valores_positivos(self):
+        self.assertEqual(-1, Calculator.subtracao(1,2))
 
+    def test_subtrai_valores_negativos(self):
+        self.assertEqual(0, Calculator.subtracao(-1,-1))
+
+    def test_subtrai_valores_positivo_negativo(self):
+        self.assertEqual(3, Calculator.subtracao(1,-2))
+
+    def test_subtrai_valores_negativo_positivo(self):
+        self.assertEqual(1, Calculator.subtracao(-1,-2))
+    
+    def test_subtrai_valores_postivo_nulo(self):
+        self.assertEqual(1, Calculator.subtracao(1,0))
+
+    def test_subtrai_valores_nulo_positivo(self):
+        self.assertEqual(-1, Calculator.subtracao(0,1))
+
+    def test_subtrai_valores_negativo_nulo(self):
+        self.assertEqual(-2, Calculator.subtracao(-2,0))
+    
+    def test_subtrai_valores_nulo_negativo(self):
+        self.assertEqual(5, Calculator.subtracao(0,-5))
+    
+    def test_subtrai_valores_nulo_nulo(self):
+        self.assertEqual(0, Calculator.subtracao(0,0))
+    
+#-------------------------------------
     def test_divisao_valores_inteiros(self):
         self.assertEqual(1, Calculator.divisao(5, 5))
 
